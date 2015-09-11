@@ -1,0 +1,7 @@
+
+This folder includes sources for /WebContent/WEB-INF/lib/controversy_detection.jar, which is required for running the controversy detection web service.
+
+/lib				All dependencies (I hope so, but please let me know if I missed some)
+/src				Source codes
+/src_other_utils	Source codes for other dependencies wrote by my own, mainly some utility functions
+

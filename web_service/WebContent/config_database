@@ -1,0 +1,16 @@
+
+# database settings
+host = localhost
+port = 3306
+db = controversy_log
+username = ctrvs
+password = cs364
+
+# max and min pooled connections for select queries
+min_conn_search = 5
+max_conn_search = 20
+
+# max and min pooled connections for insert/update/create queries
+min_conn_update = 5
+max_conn_update = 50
+

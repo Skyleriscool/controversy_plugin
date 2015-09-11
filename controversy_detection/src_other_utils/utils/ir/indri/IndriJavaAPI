@@ -1,0 +1,25 @@
+
+lemurproject.indri.QueryEnvironment
+
+* long documentCount()
+	获取index的文档总数。
+
+* long documentCount(String term)
+	获取index的含有指定term的文档数量，会将term按照建立索引时的设定stemming。
+
+* int[] documentIDsFromMetadata(String attributeName, String[] attributeValue)
+	获取指定的attribute为指定值的文档的id。
+
+* int documentLength(int docid)
+	获取指定id的文档的总长度（包括所有field）。
+
+* String[] documentMetadata(int[] documentIDs, String attributeName)
+	获取一系列文档（给定文档id）指定attribute的值。
+
+* String[] documentMetadata(ScoredExtentResult[] documents, String attributeName)
+	获取一系列文档（给定一系列返回结果）指定attribute的值。
+
+* ParsedDocument[] documents(int[] documentIDs)
+	
+
+

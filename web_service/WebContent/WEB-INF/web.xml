@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+	<display-name>controversy_webservice</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>WebpageControversyDetection</servlet-name>
+		<servlet-class>edu.umass.cs.ciir.controversy.service.ServletWebpageControversyDetection</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WebpageControversyDetection</servlet-name>
+		<url-pattern>/detect</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SubmitURLRating</servlet-name>
+		<servlet-class>edu.umass.cs.ciir.controversy.service.ServletSubmitURLRating</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitURLRating</servlet-name>
+		<url-pattern>/url_rating</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SubmitWikiEntryRating</servlet-name>
+		<servlet-class>edu.umass.cs.ciir.controversy.service.ServletSubmitWikiEntryRating</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitWikiEntryRating</servlet-name>
+		<url-pattern>/wikientry_rating</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DumpURLRating</servlet-name>
+		<servlet-class>edu.umass.cs.ciir.controversy.service.ServletDumpURLRating</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DumpURLRating</servlet-name>
+		<url-pattern>/dump_url_rating</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DumpWikiRelevance</servlet-name>
+		<servlet-class>edu.umass.cs.ciir.controversy.service.ServletDumpWikiRelevance</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DumpWikiRelevance</servlet-name>
+		<url-pattern>/dump_wiki_relevance</url-pattern>
+	</servlet-mapping>
+</web-app>

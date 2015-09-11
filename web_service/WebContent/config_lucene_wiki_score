@@ -1,0 +1,4 @@
+
+path_index = /home/jpjiang/Data/controversy_score_index
+field_key = title
+field_score = score

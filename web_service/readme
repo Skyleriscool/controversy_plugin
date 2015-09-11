@@ -1,0 +1,34 @@
+
+/src						includes all java source codes for the web service
+/WebContent					front-end stuff, html, jsp, javascript, css, etc
+/WebContent/WEB-INF/lib		all dependencies
+
+Source for /WebContent/WEB-INF/lib/controversy_detection.jar is included in ../controversy_detection/ folder.
+
+A few important stuff
+
+/WebContent/WEB-INF/web.xml					Jave Servlet configuration
+
+/WebContent/config_database					MySQL database configuration file
+/WebContent/config_wiki_index				Wikipedia article index and search configuration file
+/WebContent/config_wiki_score				Config file for another database (using Lucene index) storing controversy scores of wikipedia articles
+/WebContent/config_controversy_scorer		Config file for calculating controversy scores, similar to Shiri's CIKM13 paper
+
+You can find the index on Horsham.cs.umass.edu following the path in the configuration files.
+
+edu.umass.cs.ciir.controversy.database.RecreateTables
+	You can run this class to create all MySQL tables required to run the web service.
+	
+edu.umass.cs.ciir.controversy.services
+	Includes all java Servlets for handling the web requests.
+	
+edu.umass.cs.ciir.controversy.services.ServletWebpageControversyDetection
+	The main java servlet handling requests for detecting web page controversy
+	
+edu.umass.cs.ciir.controversy.services.ServletSubmitURLRating
+	Handling the submission of a URL's controversy score to the server
+	
+edu.umass.cs.ciir.controversy.services.ServletSubmitWikiEntryRating
+	Handling the submission of a Wikipedia entry's relevance score to the server
+
+

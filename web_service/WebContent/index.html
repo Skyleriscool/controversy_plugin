@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Webpage Controversy Detection Service</title>
+<link rel="icon" type="image/png" sizes="96x96" href="images/icon.png" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="width: 860px">
+
+	<h1>Webpage Controversy Detection Service</h1>
+	<p>This service detects the degree of controversy for a webpage.</p>
+	<p>
+		This web service is provided by <a href="http://ciir.cs.umass.edu" target="_blank">Center for Intelligent Information Retrieval</a> at <a href="https://www.cs.umass.edu" target="_blank">the College of Information and Computer Sciences</a>, University of Massachusetts Amherst. The project is supported in part by <a href="#">NSF XXXX</a>.
+	</p>
+
+	<h2>How to use?</h2>
+	<p>
+		<strong>Step 1</strong>: drag the following link to your browser's bookmark toolbar.
+	</p>
+	<p>
+		<a href='javascript: ( function() { var h = "", s, g, c, i; if ( window.getSelection ) { s = window.getSelection(); if ( s.rangeCount ) { c = document.createElement( "div" ); for ( i = 0; i < s.rangeCount; ++i ) { c.appendChild( s.getRangeAt( i ).cloneContents() ); } h = c.innerHTML; } else if ( ( s = document.selection ) && s.type == "Text" ) { h = s.createRange().htmlText; } } h = h.replace( /<[^>]+>/gi, " " ); h = h.replace( /\s+/gi, " " ); h = h.trim(); window.open( "http://horsham.cs.umass.edu:8080/controversy_webservice/controversy.html?url=" + encodeURIComponent( location.href ) + "&text=" + encodeURIComponent( h ), "_blank", "width=480, height=600, top=0, left=0, scrollbars=yes" ); } )()'>DetectControversy</a>
+	</p>
+	<p>
+		<img src="images/eg1.png" width="600px" />
+	</p>
+	<p>
+		<strong>Step 2</strong>: when visiting a webpage, simply click the DetectControversy bookmark to detect controversy.
+	</p>
+	<p>
+		<img src="images/eg2.png" width="600px" />
+	</p>
+	<p>
+		<strong>Step 3</strong>: a pop-up window will show you the degree of controversy for the webpage. Your feedback is greatly appreciated and can help us improve the service.
+	</p>
+	<p>
+		<img src="images/eg3.png" />
+	</p>
+	<p>
+		<strong>Step 4</strong>: you can also select a paragraph of text from the webpage and click the DetectControversy bookmark to detect the degree of controversy only for the selected text.
+	</p>
+	<p>
+		<img src="images/eg4.png" width="600px" />
+	</p>
+
+	<h2>References:</h2>
+	<ul>
+		<li>Shiri Dori-Hacohen and James Allan. 2013. Detecting controversy on the web. In Proceedings of the 22nd ACM international conference on Conference on information &amp; knowledge management (CIKM '13). ACM, New York, NY, USA, 1845-1848. <a href="http://doi.acm.org/10.1145/2505515.2507877" target="_blank">DOI=10.1145/2505515.2507877</a></li>
+		<li>Shiri Dori-Hacohen and James Allan. 2015. Automated Controversy Detection on the Web. In Proceedings of the 37th European Conference on IR Reseach (ECIR 2015), Vienna, Austria, March 29 - April 2, 2015, 423-434. <a href="http://link.springer.com/chapter/10.1007%2F978-3-319-16354-3_46" target="_blank">DOI=10.1007/978-3-319-16354-3_46</a></li>
+	</ul>
+
+</body>
+
+</html>
+

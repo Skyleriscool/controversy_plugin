@@ -1,0 +1,11 @@
+
+path_index = /home/jpjiang/Data/wikidump_index_random05
+field_key = title
+field_title = entry
+field_text = text
+smoothing_dir_mu = 1500
+
+tokenization = alpha
+casing = lc
+stopwords = indri stop
+stemming = kstem

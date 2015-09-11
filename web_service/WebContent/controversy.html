@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Webpage Controversy Detection</title>
+
+<link rel="icon" type="image/png" sizes="96x96" href="images/icon.png" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+<script>
+	requestid = -1;
+</script>
+
+</head>
+
+<body>
+
+	<div class="errmsg">
+		<div id="text_errmsg"></div>
+	</div>
+
+	<div class="loadmsg">
+		<img width="30px" height="30px" src=images/loader.gif />
+	</div>
+
+	<div class="scoremsg">
+		<div id="text_score"></div>
+		<div id="text_url"></div>
+		<div id="text_select"></div>
+		<div id="text_explain_title">How do we measure controversy for a webpage?</div>
+		<div id="text_explain_answer">
+			A webpage is controversial if its related Wikipedia entries are controversial and have been modified back and forth a lot by human editors (<a href="http://maroo.cs.umass.edu/pub/web/getpdf.php?id=1118" target="_bank">more details</a>).
+		</div>
+	</div>
+
+	<div class="report">
+		<a href="https://github.com/jiepujiang/controversy_detection/issues/new" target="_blank">Report an issue or make a suggestion</a>
+	</div>
+	<div style="clear: both"></div>
+
+	<div class="url_rating">
+		<div id="text_instruct"></div>
+		<div id="text_rating_status"></div>
+		<div class="option">
+			<input type="radio" id="r1" name="rating" value="1" onchange="submitURLRating(this);" /> Clearly controversial
+		</div>
+		<div class="option">
+			<input type="radio" id="r2" name="rating" value="2" onchange="submitURLRating(this);" /> Possibly controversial
+		</div>
+		<div class="option">
+			<input type="radio" id="r3" name="rating" value="3" onchange="submitURLRating(this);" /> Possibly non-controversial
+		</div>
+		<div class="option">
+			<input type="radio" id="r4" name="rating" value="4" onchange="submitURLRating(this);" /> Clearly non-controversial
+		</div>
+	</div>
+
+	<div class="wikientry_rating">
+		<div id="text_instruct_wikientry"></div>
+		<div class="text_scale_wikientry">
+			<strong>Highly On</strong>: the Wikipedia article would have contributed to constructing knowledge of the webpage./ I would read this Wikipedia article to learn more about the webpage.
+		</div>
+		<div class="text_scale_wikientry">
+			<strong>Slightly On</strong>: this Wikipedia article covers a certain topic of the webpage, but it is not the main topic.
+		</div>
+		<div class="text_scale_wikientry">
+			<strong>Slightly Off</strong>: this Wikipedia article is somewhat related to the webpage in a broad sense, but not directly related.
+		</div>
+		<div class="text_scale_wikientry">
+			<strong>Highly Off</strong>: this Wikipedia article has nothing to do with the webpage.
+		</div>
+		<div id="text_rating_status_wikientry"></div>
+		<div id="text_ratings_wikientry"></div>
+	</div>
+
+	<script>
+		requestControversyScore();
+	</script>
+
+</body>
+
+</html>
